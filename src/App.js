@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import { Provider } from 'react-redux';
 import './App.css';
+import Search from './SearchPage/SearchPageContainer';
+import store from './redux/store';
+import {BrowserRouter, Route} from "react-router-dom";
+import CountryPageContainer from "./CountryPage/CountryPageContainer";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Provider store={store}>
+        <Route path="/search" component={Search} />
+        <Route path="/countries/:countryName" render={() => <CountryPageContainer />} />
+      </Provider>
+    </BrowserRouter>
+  )
 }
 
 export default App;

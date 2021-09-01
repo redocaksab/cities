@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+ }
+ .searchWrapper {
+   position: relative;
+   width: 100%;
+   height: 370px;
+   margin-top: 30px;
+   text-align: center;
+   
+}
+ .formInner {
+    position: absolute;
+    width: 100%;
+ }
+ .formInner input {
+    display: block;
+    padding: 0 20px;
+    background: #E9EFF6;
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ .listCountry {
+   background: #E9EFF6;
+   display: inline-block;
+   margin-top: 40px;
+   text-align: left;
+   border-bottom-left-radius: 7px;
+   border-bottom-right-radius: 7px;
+   overflow-y: scroll;
+   max-height: 300px;
+}
+.listCountryDisabled{
+   display: none;
+}
+ .formInner input, .listCountry {
+   width: 50%;
+ }
+
+.focusActive input{
+   border-radius: 7px;
+}
+ .nothingFound {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+ }
+ .countryItem {
+    padding-top: 1.5px;
+    padding-bottom: 1.5px;
+    padding-left: 10px;
+    display: block;
+    text-decoration: none;
+    color: black;
+ }
+a:hover {
+   background: rgba(212, 212, 212, 0.788);
+}
+.title {
+   text-align: center;
+   margin-top: 150px;
+   font-size: 30px;
+   font-family: 'Roboto', sans-serif;
+}
